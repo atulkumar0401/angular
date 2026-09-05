@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: angular-demo
+  namespace: angular-demo
 spec:
   selector:
     app: angular-demo

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: angular-demo
+  namespace: angular-demo
   labels:
     app: angular-demo
 spec:
@@ -18,7 +19,7 @@ spec:
         - name: ocir-pull-secret
       containers:
         - name: angular-demo
-          image: me-dubai-1.ocir.io/axuri6bvn1y8/infra-portal/angular-demo:req-2026-0115
+          image: angular-demo:latest
           ports:
             - containerPort: 8080
           readinessProbe:

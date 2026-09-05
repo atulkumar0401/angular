@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: angular-demo
+  namespace: angular-demo
 spec:
   ingressClassName: nginx
   rules:
