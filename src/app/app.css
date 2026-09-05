@@ -1,0 +1,168 @@
+:host {
+  --teal: #0b5563;
+  --teal-light: #0e6e7e;
+  --amber: #d97706;
+  --ink: #12232a;
+  --ink-soft: #4d5f66;
+  --paper: #f4f8f8;
+  --card: #ffffff;
+  --border: #dce5e5;
+
+  display: block;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  min-height: 100vh;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--teal-light) 0%, var(--teal) 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 4rem 1.5rem 3.5rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ffe1b3;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: 'Sora', 'IBM Plex Sans', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.subtitle {
+  max-width: 38rem;
+  margin: 1rem auto 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-wrap: balance;
+}
+
+.loaded-at {
+  margin: 1.5rem 0 0;
+  font-size: 0.8rem;
+  font-family: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.content {
+  flex: 1;
+  width: 100%;
+  max-width: 62rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(16, 30, 32, 0.06);
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px -8px rgba(11, 85, 99, 0.25);
+}
+
+.card-icon {
+  display: inline-flex;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.card h2 {
+  margin: 0 0 0.4rem;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.interactive {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 16px -4px rgba(16, 30, 32, 0.08);
+}
+
+.interactive h2 {
+  margin: 0 0 0.5rem;
+  font-family: 'Sora', sans-serif;
+  font-size: 1.3rem;
+}
+
+.interactive p {
+  margin: 0 0 1.25rem;
+  color: var(--ink-soft);
+}
+
+.interactive button {
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--amber);
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.interactive button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -4px rgba(217, 119, 6, 0.5);
+}
+
+.interactive button:active {
+  transform: translateY(1px);
+}
+
+.count {
+  margin-top: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--border);
+}

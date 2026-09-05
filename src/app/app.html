@@ -1,0 +1,34 @@
+<div class="page">
+  <header class="hero">
+    <p class="eyebrow">Build and Deploy demo</p>
+    <h1>{{ title() }}</h1>
+    <p class="subtitle">
+      A small, real Angular app — built by Kaniko, deployed by ArgoCD, and served
+      by NGINX on Oracle Kubernetes Engine.
+    </p>
+    <p class="loaded-at">Page rendered at {{ loadedAt }}</p>
+  </header>
+
+  <main class="content">
+    <section class="features">
+      @for (f of features; track f.title) {
+        <article class="card">
+          <span class="card-icon">{{ f.icon }}</span>
+          <h2>{{ f.title }}</h2>
+          <p>{{ f.detail }}</p>
+        </article>
+      }
+    </section>
+
+    <section class="interactive">
+      <h2>This page is a real, running app</h2>
+      <p>Every click below runs in your browser, right now — not a static screenshot.</p>
+      <button type="button" (click)="bump()">Click me</button>
+      <p class="count">Clicked <strong>{{ clicks() }}</strong> time{{ clicks() === 1 ? '' : 's' }}</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Shift-Left Infrastructure Provisioning Portal — Angular sample app</p>
+  </footer>
+</div>
