@@ -19,7 +19,7 @@ spec:
         - name: ocir-pull-secret
       containers:
         - name: angular-demo
-          image: me-dubai-1.ocir.io/axuri6bvn1y8/infra-portal/angular-demo:req-2026-0142-be027566f621
+          image: me-dubai-1.ocir.io/axuri6bvn1y8/infra-portal/angular-demo:req-2026-0142-c4a3a655af6c
           ports:
             - containerPort: 8080
           readinessProbe:
